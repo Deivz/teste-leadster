@@ -1,5 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 
+export const breakPoint = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '81.25rem',
+  desktop: '90rem'
+}
+
+export const device = {
+  mobileS: `(min-width: ${breakPoint.mobileS})`,
+  mobileM: `(min-width: ${breakPoint.mobileM})`,
+  mobileL: `(min-width: ${breakPoint.mobileL})`,
+  tablet: `(min-width: ${breakPoint.tablet})`,
+  laptop: `(min-width: ${breakPoint.laptop})`,
+  desktop: `(min-width: ${breakPoint.desktop})`
+};
+
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -23,9 +41,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     flex-grow: 1;
   }
 `;

@@ -4,6 +4,9 @@ export const defaultTheme = {
   'button-font-color': '#000000',
   'color-blue-sky': '#0073FF',
   'section-bg-color': '#F0F8FF',
+  'border-footer-color': '#EFF0F2',
+
+  'font-color-footer': '#5C8C9D',
 
   'font-family': "'Plus Jakarta Sans', sans-serif",
   'font-weight-extra-light': '200',
@@ -13,5 +16,4 @@ export const defaultTheme = {
   'font-weight-semi-bold': '600',
   'font-weight-bold': '700',
   'font-weight-extra-bold': '800',
-  
 }
