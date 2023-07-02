@@ -1,13 +1,17 @@
 import { styled } from "styled-components";
 import { device } from "../global";
+import { css } from "styled-components";
 
 export const DefaultPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `
+interface DivContainerProps {
+  isLarge: boolean;
+}
 
-export const DivContainer = styled.div`
+export const DivContainer = styled.div<DivContainerProps>`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +22,18 @@ export const DivContainer = styled.div`
   width: ${({theme}) => theme["container-width"]};
 
   @media ${device.tablet} {
-    width: ${({theme}) => theme["container-width-large"]};
+    ${({isLarge}) => {
+      return isLarge ? css`
+        width: ${({theme}) => theme["container-width"]};
+      `
+      :
+      css`
+        width: ${({theme}) => theme["container-width-desktop"]};
+      `
+    }}
+  }
+
+  @media ${device.laptop} {
+    justify-content: space-between;
   }
 `

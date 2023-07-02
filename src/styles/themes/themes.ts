@@ -19,5 +19,5 @@ export const defaultTheme = {
   'font-weight-extra-bold': '800',
 
   'container-width': '96%',
-  'container-width-large': '80%'
+  'container-width-desktop': '60%'
 }

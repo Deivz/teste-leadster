@@ -94,7 +94,7 @@ export const FooterLastDiv = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: ${({theme}) => theme["container-width-large"]};
+      width: ${({theme}) => theme["container-width-desktop"]};
     }
   }
 `
