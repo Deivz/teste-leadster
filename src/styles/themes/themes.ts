@@ -5,6 +5,7 @@ export const defaultTheme = {
   'color-blue-sky': '#0073FF',
   'section-bg-color': '#F0F8FF',
   'border-footer-color': '#EFF0F2',
+  'border-section-color': '#C8D4DD',
 
   'font-color-footer': '#5C8C9D',
 
@@ -16,4 +17,7 @@ export const defaultTheme = {
   'font-weight-semi-bold': '600',
   'font-weight-bold': '700',
   'font-weight-extra-bold': '800',
+
+  'container-width': '96%',
+  'container-width-large': '80%'
 }

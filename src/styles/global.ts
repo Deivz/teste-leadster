@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 export const breakPoint = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
+  mobileS: '20rem',
+  mobileM: '23.438rem',
+  mobileL: '26.563rem',
+  tablet: '48rem',
   laptop: '81.25rem',
   desktop: '90rem'
 }

@@ -4,12 +4,13 @@ import Link from "next/link";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin } from "react-icons/bi";
 import { FooterContainer, FooterLastDiv, SocialIconsContainer } from "@/styles/components/Footer";
 import { DivContainer } from "@/styles/components/DefaultPage";
+import LogoWithText from "../LogoWithText";
 
 export default function Footer() {
   return (
     <FooterContainer>
       <DivContainer>
-        <Image src='/images/logo.png' alt='Logomarca da Leadster' width={194} height={42} />
+        <LogoWithText />
         <nav>
           {
             links.map((link) => {

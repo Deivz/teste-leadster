@@ -27,23 +27,22 @@ export const FooterContainer = styled.footer`
 
   @media ${device.mobileL} {
     nav{
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 100%;
-
-      ul{
-        width: 40%;
-      }
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
     }
   }
 
   @media ${device.tablet} {
     nav{
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+    }
+  }
 
-      ul{
-        width: auto;
-      }
+  @media ${device.desktop} {
+    nav{
+      gap: 5em;
     }
   }
 `
@@ -55,9 +54,14 @@ export const SocialIconsContainer = styled.li`
   width: 8rem;
 
   span{
+    align-items: center;
     background-color: ${({ theme }) => theme["border-footer-color"]};
     border-radius: 50%;
-    padding: .5rem;
+    display: flex;
+    font-size: .875rem;
+    height: 2.5rem;
+    justify-content: center;
+    width: 2.5rem
   }
 `
 
@@ -68,18 +72,20 @@ export const FooterLastDiv = styled.div`
   font-size: .65rem;
   height: 5rem;
 
+  
   div{
     align-items: center;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 90rem; 
-    width: 80%;
+    width: ${({theme}) => theme["container-width"]};
 
     span{
       color: ${({ theme }) => theme["font-color-footer"]};
       text-align: center;
     }
+
   }
 
   @media ${device.laptop} {
@@ -88,6 +94,7 @@ export const FooterLastDiv = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      width: ${({theme}) => theme["container-width-large"]};
     }
   }
 `
