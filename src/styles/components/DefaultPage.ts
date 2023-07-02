@@ -8,7 +8,7 @@ export const DefaultPageContainer = styled.div`
   min-height: 100vh;
 `
 interface DivContainerProps {
-  isLarge: boolean;
+  isLarge?: boolean;
 }
 
 export const DivContainer = styled.div<DivContainerProps>`

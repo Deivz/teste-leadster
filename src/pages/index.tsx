@@ -1,13 +1,28 @@
 import Button from "@/components/Button";
 import { DivContainer } from "@/styles/components/DefaultPage";
-import { AppContainer, HomeContainer, InfosContainer, TextContainer } from "@/styles/pages/Home";
-import Image from "next/image";
+import { AppContainer, HomeContainer, InfosContainer, SloganContainer, TextContainer } from "@/styles/pages/Home";
 
 export default function Home() {
   return (
     <HomeContainer>
-      <section></section>
-      <section></section>
+      <section>
+        <DivContainer isLarge={true} className="container__conversion">
+          <span className="container__webinars">
+            <h4>WEBINARS EXCLUSIVOS</h4>
+          </span>
+          <h3>Menos Conversinha,</h3>
+          <SloganContainer>
+            <img src="/images/asset-header.png" />
+            <h2>Mais Conversão</h2>
+          </SloganContainer>
+          <h5>Conheça as estratégias que <strong>mudaram o jogo</strong> e como aplicá-las no seu negócio</h5>
+        </DivContainer>
+      </section>
+      <section>
+        <DivContainer>
+          <h3>CARDS DOS VIDEOS</h3>
+        </DivContainer>
+      </section>
       <section>
         <DivContainer isLarge={true}>
           <img

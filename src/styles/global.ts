@@ -21,9 +21,9 @@ export const device = {
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
-    color: ${props => props.theme["color-grayish-blue"]};
+    color: ${({ theme }) => theme["color-grayish-blue"]};
     margin: 0;
-    font-family: ${props => props.theme["font-family"]};
+    font-family: ${({ theme }) => theme["font-family"]};
     padding: 0;
   }
 
@@ -33,14 +33,55 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background-color: ${props => props.theme["body-bg-color"]};
+    background-color: ${({ theme }) => theme["body-bg-color"]};
     color: var(--texto-padrao);
     font-family: var(--fonte);
-    line-height: 19px;
     height: 100%;
   }
 
   main{
     flex-grow: 1;
+  }
+
+  h2{
+    color:  ${({ theme }) => theme["color-blue-sky"]};
+    font-size: 2.5rem;
+  }
+
+  h3{
+    font-size: 1.5rem;
+    font-weight: ${({ theme }) => theme["font-weight-semi-bold"]};
+  }
+  
+  strong{
+    font-weight: ${({ theme }) => theme["font-weight-extra-bold"]};
+  }
+  
+  h4{
+    font-size: .6875rem;
+    font-weight: ${({ theme }) => theme["font-weight-medium"]};
+  }
+
+  h5{
+    font-size: .625rem;
+    font-weight: ${({ theme }) => theme["font-weight-semi-bold"]};
+  }
+
+  @media ${device.laptop} {
+    h2{
+      font-size: 3.5rem;
+    }
+
+    h3{
+      font-size: 2rem;
+    }
+
+    h4{
+      font-size: .875rem;
+    }
+
+    h5{
+      font-size: .75rem;
+    }
   }
 `;

@@ -3,21 +3,6 @@ import { device } from "../global";
 
 export const HomeContainer = styled.article`
   section{
-    h3{
-      font-size: 1rem;
-      font-weight: ${({ theme }) => theme["font-weight-semi-bold"]};
-
-    }
-    
-    strong{
-      font-weight: ${({ theme }) => theme["font-weight-extra-bold"]};
-    }
-    
-    h4{
-      font-size: .6875rem;
-      font-weight: ${({ theme }) => theme["font-weight-medium"]};
-    }
-
     img {
       max-height: 21.25rem;
     }
@@ -28,19 +13,34 @@ export const HomeContainer = styled.article`
       }
     }
 
+    .container__conversion {
+      display: flex;
+      flex-direction: column;
+
+      .container__webinars{
+        border: solid .125rem ${({ theme }) => theme["color-blue-sky"]};
+        border-radius: 2rem 2rem 2rem .2rem;
+        margin-bottom: 1rem;
+        padding: .5rem;
+
+        h4{
+          color: ${({ theme }) => theme["color-blue-sky"]};
+          font-size: .6875rem;
+          font-weight: ${({ theme }) => theme["font-weight-bold"]};
+        }
+      }
+
+      h5{
+        border-top: .1rem solid ${({ theme }) => theme["border-section-color"]};
+        padding: 1rem 0;
+      }
+    }
+
     @media ${device.laptop} {
       div{
         .container__info{
           width: 40vw;
         }
-      }
-
-      h3{
-        font-size: 2rem;
-      }
-
-      h4{
-        font-size: .875rem;
       }
     }
 
@@ -53,12 +53,27 @@ export const HomeContainer = styled.article`
     }
   }
 
-  section:nth-child(1n){
+  section:nth-child(odd){
     background-color: ${({ theme }) => theme["section-bg-color"]};
   }
+`
 
-  
+export const SloganContainer = styled.div`
+  padding: 1rem 0;
+  position: relative;
 
+  img{
+    height: 1rem;
+    position: absolute;
+    right: -0.65rem;
+    top: 1.5rem;
+  }
+
+  @media ${device.laptop} {
+    img{
+      height: 1.5rem;
+    }
+  }
 `
 
 export const TextContainer = styled.div`
