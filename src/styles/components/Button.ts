@@ -10,6 +10,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
   border: none;
   border-radius: 2rem;
   color: white;
+  cursor: pointer;
   font-size: .75rem;
   font-weight: 600;
   height: ${({height}) => `${height}rem`};

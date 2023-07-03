@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { links } from "@/utils/links";
+import { links } from "@/utils/footerLinks";
 import Link from "next/link";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin } from "react-icons/bi";
 import { FooterContainer, FooterLastDiv, SocialIconsContainer } from "@/styles/components/Footer";

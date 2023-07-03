@@ -3,13 +3,20 @@ import { device } from "../global";
 
 export const HomeContainer = styled.article`
   section{
-    img {
+    .container__image {
       max-height: 21.25rem;
     }
 
     @media ${device.mobileL} {
-      img {
+      .container__image {
         max-height: 100vh;
+      }
+    }
+
+    @media ${device.laptop} {
+      .container__image {
+        max-height: initial;
+        width: 50vw;
       }
     }
 

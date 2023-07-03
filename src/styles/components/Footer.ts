@@ -19,6 +19,7 @@ export const FooterContainer = styled.footer`
 
       li{
         color: ${({ theme }) => theme["font-color-footer"]};
+        cursor: pointer;
         font-size: 0.75rem;
         padding-top: .3rem;
       }
@@ -49,6 +50,7 @@ export const FooterContainer = styled.footer`
 
 export const SocialIconsContainer = styled.li`
   align-items: center;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   width: 8rem;
