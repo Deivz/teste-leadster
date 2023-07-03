@@ -1,10 +1,14 @@
 import Button from "@/components/Button";
 import FilterBar from "@/components/FilterBar";
+import { FilterContext } from "@/contexts/FilterContext";
 import { DivContainer } from "@/styles/components/DefaultPage";
 import { AppContainer, HomeContainer, InfosContainer, SloganContainer, TextContainer } from "@/styles/pages/Home";
-import { videos } from "@/utils/videos";
+import { useContext } from "react";
 
 export default function Home() {
+
+  const { genresList } = useContext(FilterContext)
+
   return (
     <HomeContainer>
       <section>
@@ -22,7 +26,7 @@ export default function Home() {
       </section>
       <section>
         <DivContainer>
-          <FilterBar videos={videos} />
+          <FilterBar genres={genresList} />
         </DivContainer>
       </section>
       <section>

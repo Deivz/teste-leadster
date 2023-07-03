@@ -15,6 +15,7 @@ export const FilterBarContainer = styled.div`
       border-radius: 2rem;
       cursor: pointer;
       display: flex;
+      font-size: .75rem;
       justify-content: center;
       padding: .5rem;
     }
@@ -35,6 +36,10 @@ export const FilterBarContainer = styled.div`
     ul{
       gap: .5rem;
       grid-template-columns: repeat(5, 1fr);
+
+      li{
+        font-size: .875rem;
+      }
     }
   }
 `

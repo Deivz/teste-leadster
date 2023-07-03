@@ -16,7 +16,7 @@ export const HomeContainer = styled.article`
     @media ${device.laptop} {
       .container__image {
         max-height: initial;
-        width: 50vw;
+        max-width: 50vw;
       }
     }
 

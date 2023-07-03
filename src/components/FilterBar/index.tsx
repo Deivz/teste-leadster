@@ -1,19 +1,25 @@
+import { MouseEventHandler, useContext } from 'react';
+import { FilterContext, Genre } from '@/contexts/FilterContext';
 import { FilterBarContainer } from '@/styles/components/FilterBar';
-import { Video, Videos } from '@/utils/videos';
 
 interface FilterBarProps {
-  videos: Videos;
+  genres: Genre[];
+  // onClick: MouseEventHandler<HTMLDivElement>;
 }
 
-export default function FilterBar({ videos }: FilterBarProps) {
+export default function FilterBar({ genres }: FilterBarProps) {
+
+  const { setFilter } = useContext(FilterContext);
 
   return (
     <FilterBarContainer>
       <ul>
         {
-          videos.map((video: Video) => {
+          genres.map((genre: Genre) => {
             return (
-              <li key={video.id}>{video.title}</li>
+              <li key={genre.id} onClick={() => setFilter(genre.title)}>
+                {genre.title}
+              </li>
             );
           })
         }
