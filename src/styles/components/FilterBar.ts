@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { device } from "../global";
 
-export const NavBarContainer = styled.div`
+export const FilterBarContainer = styled.div`
 
   ul{
     display: grid;

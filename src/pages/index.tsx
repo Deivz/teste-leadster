@@ -1,8 +1,8 @@
 import Button from "@/components/Button";
-import NavBar from "@/components/NavBar";
+import FilterBar from "@/components/FilterBar";
 import { DivContainer } from "@/styles/components/DefaultPage";
 import { AppContainer, HomeContainer, InfosContainer, SloganContainer, TextContainer } from "@/styles/pages/Home";
-import { navLinks } from "@/utils/navLinks";
+import { videos } from "@/utils/videos";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       </section>
       <section>
         <DivContainer>
-          <NavBar links={navLinks} />
+          <FilterBar videos={videos} />
         </DivContainer>
       </section>
       <section>
