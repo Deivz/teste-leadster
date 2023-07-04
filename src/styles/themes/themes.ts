@@ -20,5 +20,6 @@ export const defaultTheme = {
   'font-weight-extra-bold': '800',
 
   'container-width': '96%',
+  'container-width-laptop': '76%',
   'container-width-desktop': '60%'
 }

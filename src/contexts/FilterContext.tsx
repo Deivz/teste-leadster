@@ -23,7 +23,6 @@ export default function FilterContextProvider({ children }: FilterContextProps) 
 
    const [filter, setFilter] = useState<string>();
    const [genresList, setGenresList] = useState<Genre[]>([]);
-   // const [videoList, setVideoList] = useState<Videos>([]);
 
    const getGenresList = useCallback((videos: Videos): Genre[] => {
       const genres: Genre[] = [];
@@ -36,7 +35,7 @@ export default function FilterContextProvider({ children }: FilterContextProps) 
          }
       }
    
-      return genres;
+      return genres.sort((a, b) => a.title.localeCompare(b.title));
    }, [videos]);
 
    useEffect(() => {

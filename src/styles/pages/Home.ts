@@ -49,11 +49,15 @@ export const SloganContainer = styled.div`
     }
 
   @media ${device.laptop} {
-    width: ${({ theme }) => theme["container-width-desktop"]};
+    width: ${({ theme }) => theme["container-width-laptop"]};
 
       img{
         height: 1.5rem;
       }
+  }
+
+  @media ${device.desktop} {
+    width: ${({ theme }) => theme["container-width-desktop"]};
   }
 `
 
@@ -80,16 +84,17 @@ export const VideosContainer = styled.div`
     }
 
     @media ${device.laptop}{
-      width: ${({ theme }) => theme["container-width-desktop"]};
-
+      width: ${({ theme }) => theme["container-width-laptop"]};
+      
       .videos{
         gap: 4rem;
         width: 100%;
       }
     }
-
+    
     @media ${device.desktop}{
-        .videos{
+      width: ${({ theme }) => theme["container-width-desktop"]};
+      .videos{
           gap: 2rem;
           grid-template-columns: repeat(3, 1fr);
           width: auto;

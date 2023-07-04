@@ -30,7 +30,10 @@ export default function FilterBar({ genres }: FilterBarProps) {
           })
         }
       </ul>
-      <Select options={options} className='select' />
+      <div className='order'>
+        <span>Ordernar por</span>
+        <Select options={options} className='select' />
+      </div>
     </FilterBarContainer>
   )
 }

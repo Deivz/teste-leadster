@@ -60,6 +60,10 @@ export const DivContainerFooter = styled.div`
   
   @media ${device.laptop} {
     justify-content: space-between;
+    width: ${({ theme }) => theme["container-width-laptop"]};
+  }
+
+  @media ${device.desktop} {
     width: ${({ theme }) => theme["container-width-desktop"]};
   }
 `
