@@ -8,7 +8,7 @@ import { useContext } from "react";
 
 export default function Home() {
 
-  const { filter, genresList, videoList } = useContext(FilterContext)
+  const { filter, genresList, videos } = useContext(FilterContext)
 
   return (
     <HomeContainer>
@@ -30,19 +30,9 @@ export default function Home() {
           <FilterBar genres={genresList} />
           <div className="videos">
             {
-              videoList.map((video: Video) => <VideoCard video={video} key={video.id} />)
-            }
-            {
-              (filter === undefined)
-                ?
-                videoList.map((video: Video) => <VideoCard video={video} key={video.id} />)
-                :
-                videoList?.map((video: Video) => {
-                  if (video.genre.toUpperCase().includes(filter.toUpperCase())
-                  ) {
-                    return <VideoCard video={video} key={video.id} />
-                  }
-                })
+              videos
+                .filter((video: Video) => !filter || video.genre.toUpperCase().includes(filter.toUpperCase()))
+                .map((video: Video) => <VideoCard video={video} key={video.id} />)
             }
           </div>
         </VideosContainer>

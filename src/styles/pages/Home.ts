@@ -68,7 +68,6 @@ export const VideosContainer = styled.div`
   width: ${({ theme }) => theme["container-width"]};
 
     .videos{
-      /* width: 100%; */
       margin-top: 2rem;
     }
 
