@@ -10,38 +10,108 @@ export interface Video {
 
 export const videos = [
   {
-    id: '1',
-    title: 'Como surgiu a Leadster e os desafios de Empreender na área de Tecnologia',
-    url: 'https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=2&ab_channel=Leadster-MarketingConversacional',
-    genre: 'Geração de Leads',
-    thumbnail: 'images/thumbnail.png'
+    "id": "1",
+    "title": "Como surgiu a Leadster e os desafios de Empreender na área de Tecnologia",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=2&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Geração de Leads",
+    "thumbnail": "images/thumbnail.png"
   },
   {
-    id: '2',
-    title: 'Estratégias de curto e longo prazo no Marketing Digital',
-    url: 'https://www.youtube.com/watch?v=PHAfkczqlMY&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=3&ab_channel=Leadster-MarketingConversacional',
-    genre: 'Geração de Leads',
-    thumbnail: 'images/thumbnail.png'
+    "id": "2",
+    "title": "Estratégias de curto e longo prazo no Marketing Digital",
+    "url": "https://www.youtube.com/watch?v=PHAfkczqlMY&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=3&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Geração de Leads",
+    "thumbnail": "images/thumbnail.png"
   },
   {
-    id: '3',
-    title: 'Mercado, Produto, Modelo e Canais - O Mix de variáveis do Marketing Digital',
-    url: 'https://www.youtube.com/watch?v=aT88TbvdPEY&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=4&ab_channel=Leadster-MarketingConversacional',
-    genre: 'Geração de Leads',
-    thumbnail: 'images/thumbnail.png'
+    "id": "3",
+    "title": "Mercado, Produto, Modelo e Canais - O Mix de variáveis do Marketing Digital",
+    "url": "https://www.youtube.com/watch?v=aT88TbvdPEY&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=4&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Geração de Leads",
+    "thumbnail": "images/thumbnail.png"
   },
   {
-    id: '4',
-    title: 'Model-Channel Fit: Entenda em quais canais atuar a partir do seu Modelo de Negócio',
-    url: 'https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=5&ab_channel=Leadster-MarketingConversacional',
-    genre: 'Marketing Digital',
-    thumbnail: 'images/thumbnail.png'
+    "id": "4",
+    "title": "Model-Channel Fit: Entenda em quais canais atuar a partir do seu Modelo de Negócio",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=5&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Marketing Digital",
+    "thumbnail": "images/thumbnail.png"
   },
   {
-    id: '5',
-    title: 'Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?',
-    url: 'https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional',
-    genre: 'Agências',
-    thumbnail: 'images/thumbnail.png'
-  }
+    "id": "5",
+    "title": "Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Agências",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "6",
+    "title": "Mercado, Produto, Modelo e Canais - O Mix de variáveis do Marketing Digital",
+    "url": "https://www.youtube.com/watch?v=aT88TbvdPEY&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=4&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Geração de Leads",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "7",
+    "title": "Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Agências",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "8",
+    "title": "Estratégias de curto e longo prazo no Marketing Digital",
+    "url": "https://www.youtube.com/watch?v=PHAfkczqlMY&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=3&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Geração de Leads",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "9",
+    "title": "Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Agências",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "10",
+    "title": "Como surgiu a Leadster e os desafios de Empreender na área de Tecnologia",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=2&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Geração de Leads",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "11",
+    "title": "Mercado, Produto, Modelo e Canais - O Mix de variáveis do Marketing Digital",
+    "url": "https://www.youtube.com/watch?v=aT88TbvdPEY&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=4&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Mídia Paga",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "12",
+    "title": "Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Mídia Paga",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "13",
+    "title": "Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Chatbot",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "14",
+    "title": "Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Agências",
+    "thumbnail": "images/thumbnail.png"
+  },
+  {
+    "id": "15",
+    "title": "Product-Market Fit: O que é e por que sua Startup precisa dele para sobreviver?",
+    "url": "https://www.youtube.com/watch?v=EW6QAM4ypVE&list=PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF&index=6&ab_channel=Leadster-MarketingConversacional",
+    "genre": "Chatbot",
+    "thumbnail": "images/thumbnail.png"
+  },
 ]

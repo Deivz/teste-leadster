@@ -1,3 +1,4 @@
+import Select from 'react-select';
 import { useContext } from 'react';
 import { FilterContext, Genre } from '@/contexts/FilterContext';
 import { FilterBarContainer } from '@/styles/components/FilterBar';
@@ -5,6 +6,12 @@ import { FilterBarContainer } from '@/styles/components/FilterBar';
 interface FilterBarProps {
   genres: Genre[];
 }
+
+//remover codigo abaixo apos teste e inserir valores dos filtros
+const options = [
+  { value: 'data', label: 'Data de Publicação' },
+  { value: 'emAlta', label: 'Em alta' }
+]
 
 export default function FilterBar({ genres }: FilterBarProps) {
 
@@ -23,6 +30,7 @@ export default function FilterBar({ genres }: FilterBarProps) {
           })
         }
       </ul>
+      <Select options={options} className='select' />
     </FilterBarContainer>
   )
 }
