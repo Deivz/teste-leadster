@@ -83,6 +83,27 @@ export const SloganContainer = styled.div`
   }
 `
 
+export const VideoContainer = styled.div`
+  /* width: 100%; */
+
+  @media ${device.tablet}{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${device.laptop}{
+    gap: 4rem;
+    width: 100%;
+  }
+
+  @media ${device.desktop}{
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+  }
+`
+
 export const TextContainer = styled.div`
   line-height: 1.3;
   padding-bottom: .75rem;

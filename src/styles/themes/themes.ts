@@ -6,6 +6,7 @@ export const defaultTheme = {
   'section-bg-color': '#F0F8FF',
   'border-footer-color': '#EFF0F2',
   'border-section-color': '#C8D4DD',
+  'videocard-bg-color': '#FFFFFF',
 
   'font-color-footer': '#5C8C9D',
 

@@ -1,13 +1,15 @@
 import Button from "@/components/Button";
 import FilterBar from "@/components/FilterBar";
+import VideoCard from "@/components/VideoCard";
 import { FilterContext } from "@/contexts/FilterContext";
 import { DivContainer } from "@/styles/components/DefaultPage";
-import { AppContainer, HomeContainer, InfosContainer, SloganContainer, TextContainer } from "@/styles/pages/Home";
+import { AppContainer, HomeContainer, InfosContainer, SloganContainer, TextContainer, VideoContainer } from "@/styles/pages/Home";
+import { Video } from "@/utils/videos";
 import { useContext } from "react";
 
 export default function Home() {
 
-  const { genresList } = useContext(FilterContext)
+  const { genresList, videoList } = useContext(FilterContext)
 
   return (
     <HomeContainer>
@@ -27,6 +29,11 @@ export default function Home() {
       <section>
         <DivContainer>
           <FilterBar genres={genresList} />
+          <VideoContainer>
+            {
+              videoList.map((video: Video) => <VideoCard video={video} />)
+            }
+          </VideoContainer>
         </DivContainer>
       </section>
       <section>

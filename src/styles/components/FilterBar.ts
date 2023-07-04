@@ -2,6 +2,8 @@ import { styled } from "styled-components";
 import { device } from "../global";
 
 export const FilterBarContainer = styled.div`
+  margin: 1rem 0;
+  width: 100%;
 
   ul{
     display: grid;
