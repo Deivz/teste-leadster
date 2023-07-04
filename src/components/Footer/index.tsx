@@ -1,14 +1,13 @@
 import { links } from "@/utils/footerLinks";
 import Link from "next/link";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin } from "react-icons/bi";
-import { FooterContainer, FooterLastDiv, SocialIconsContainer } from "@/styles/components/Footer";
-import { DivContainer } from "@/styles/components/DefaultPage";
+import { DivContainerFooter, FooterContainer, FooterLastDiv, SocialIconsContainer } from "@/styles/components/Footer";
 import LogoWithText from "../LogoWithText";
 
 export default function Footer() {
   return (
     <FooterContainer>
-      <DivContainer>
+      <DivContainerFooter>
         <LogoWithText />
         <nav>
           {
@@ -36,7 +35,7 @@ export default function Footer() {
             })
           }
         </nav>
-      </DivContainer>
+      </DivContainerFooter>
       <FooterLastDiv>
         <div>
           <span>Copyright &copy; 2015-2022 Todos os direitos reservados | <Link href="/">Leadster</Link></span>

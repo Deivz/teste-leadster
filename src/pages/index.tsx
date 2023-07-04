@@ -2,8 +2,7 @@ import Button from "@/components/Button";
 import FilterBar from "@/components/FilterBar";
 import VideoCard from "@/components/VideoCard";
 import { FilterContext } from "@/contexts/FilterContext";
-import { DivContainer } from "@/styles/components/DefaultPage";
-import { AppContainer, HomeContainer, InfosContainer, SloganContainer, TextContainer, VideoContainer } from "@/styles/pages/Home";
+import { BenefitsContainer, HomeContainer, SloganContainer, VideosContainer } from "@/styles/pages/Home";
 import { Video } from "@/utils/videos";
 import { useContext } from "react";
 
@@ -14,24 +13,24 @@ export default function Home() {
   return (
     <HomeContainer>
       <section>
-        <DivContainer isLarge={true} className="container__conversion">
-          <span className="container__webinars">
+        <SloganContainer>
+          <span className="webinars">
             <h4>WEBINARS EXCLUSIVOS</h4>
           </span>
           <h3>Menos Conversinha,</h3>
-          <SloganContainer>
+          <div className="slogan">
             <img src="/images/asset-header.png" />
             <h2>Mais Conversão</h2>
-          </SloganContainer>
+          </div>
           <h5>Conheça as estratégias que <strong>mudaram o jogo</strong> e como aplicá-las no seu negócio</h5>
-        </DivContainer>
+        </SloganContainer>
       </section>
       <section>
-        <DivContainer>
+        <VideosContainer>
           <FilterBar genres={genresList} />
-          <VideoContainer>
+          <div className="videos">
             {
-              videoList.map((video: Video) => <VideoCard video={video} />)
+              videoList.map((video: Video) => <VideoCard video={video} key={video.id} />)
             }
             {
               (filter === undefined)
@@ -45,22 +44,21 @@ export default function Home() {
                   }
                 })
             }
-          </VideoContainer>
-        </DivContainer>
+          </div>
+        </VideosContainer>
       </section>
       <section>
-        <DivContainer isLarge={true}>
+        <BenefitsContainer>
           <img
-            className="container__image"
             src='/images/comparativo.png'
             alt='Gráfico de comparação de leads da Leadster com outras ferramentas. Leadster liderando com quase o dobro da segunda posição.'
           />
-          <div className="container__info">
-            <TextContainer>
+          <div className="info">
+            <div className="text">
               <h3>Pronto para triplicar sua <strong>Geração de Leads?</strong></h3>
               <h4>Criação e ativação em <strong>4 minutos</strong>.</h4>
-            </TextContainer>
-            <AppContainer>
+            </div>
+            <div className="app">
               <div>
                 <Button text="VER DEMONSTRAÇÃO" />
                 <img
@@ -68,9 +66,9 @@ export default function Home() {
                   alt='Selo da RD Station que identifica a Leadster como top10 dos apps mais utilizados.'
                 />
               </div>
-            </AppContainer>
-            <InfosContainer>
-              <div className="container__card">
+            </div>
+            <div className="extra">
+              <div className="card">
                 <img
                   src='/images/no-card-dark.webp'
                   alt="Icone com um cartão de crédito cortado, indicando que não há necessidade de cadastrar um cartão de crédito"
@@ -78,16 +76,16 @@ export default function Home() {
                 <h4><strong>Não</strong> é necessário Cartão de Crédito</h4>
               </div>
               <span className="pipe"> | </span>
-              <div className="container__rating">
+              <div className="rating">
                 <img
                   src='/images/rating.webp'
                   alt="Avaliação de 4.9 estrelas num total de 5."
                 />
                 <h4><strong>4.9/5</strong> média de satisfação</h4>
               </div>
-            </InfosContainer>
+            </div>
           </div>
-        </DivContainer>
+        </BenefitsContainer>
       </section>
     </HomeContainer>
   )

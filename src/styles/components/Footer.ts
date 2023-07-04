@@ -48,6 +48,22 @@ export const FooterContainer = styled.footer`
   }
 `
 
+export const DivContainerFooter = styled.div`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 90rem; 
+  padding: 1.5rem 0;
+  width: ${({ theme }) => theme["container-width"]};
+  
+  @media ${device.laptop} {
+    justify-content: space-between;
+    width: ${({ theme }) => theme["container-width-desktop"]};
+  }
+`
+
 export const SocialIconsContainer = styled.li`
   align-items: center;
   cursor: pointer;
