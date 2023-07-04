@@ -9,7 +9,7 @@ import { useContext } from "react";
 
 export default function Home() {
 
-  const { genresList, videoList } = useContext(FilterContext)
+  const { filter, genresList, videoList } = useContext(FilterContext)
 
   return (
     <HomeContainer>
@@ -32,6 +32,18 @@ export default function Home() {
           <VideoContainer>
             {
               videoList.map((video: Video) => <VideoCard video={video} />)
+            }
+            {
+              (filter === undefined)
+                ?
+                videoList.map((video: Video) => <VideoCard video={video} key={video.id} />)
+                :
+                videoList?.map((video: Video) => {
+                  if (video.genre.toUpperCase().includes(filter.toUpperCase())
+                  ) {
+                    return <VideoCard video={video} key={video.id} />
+                  }
+                })
             }
           </VideoContainer>
         </DivContainer>

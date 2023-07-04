@@ -85,6 +85,7 @@ export const SloganContainer = styled.div`
 
 export const VideoContainer = styled.div`
   /* width: 100%; */
+  margin-top: 2rem;
 
   @media ${device.tablet}{
     display: grid;

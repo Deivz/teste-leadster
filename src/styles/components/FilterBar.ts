@@ -2,7 +2,9 @@ import { styled } from "styled-components";
 import { device } from "../global";
 
 export const FilterBarContainer = styled.div`
+  border-bottom: .1rem solid ${({ theme }) => theme["border-section-color"]};
   margin: 1rem 0;
+  padding-bottom: 2rem;
   width: 100%;
 
   ul{
