@@ -8,8 +8,6 @@ Repositório criado para o teste técnico realizado para vaga de Desenvolvedor F
 
 Fora enviado uma lista de requisitos e uma imagem png com o layout da página, a fim de que fosse desenvolvido uma landing page com essas informações enviadas.
 
-Seguem abaixo algumas imagens para ilustrar como ficou.
-
 ### Layout fornecido para desktop
 <img src="https://github.com/Deivz/teste-leadster/assets/78604613/a7c44683-7e55-4981-b8d8-e3ecc890879c" alt="Imagem do projeto rodando em um browser desktop" />
 
@@ -98,6 +96,13 @@ Estas, infelizmente, não puderam ser contornadas 100%. O filtro ficou simples, 
 Outra dificuldade foi a não utilização de ferramentas como o figma e/ou photoshop para seguir como base para o layout. Adaptar um projeto vindo somente de um .png é bastante trabalhoso. Entretanto, como já passei
 por situações assim em minha carreira (ainda bastante breve), pude lidar da melhor forma e entregar um layout que, ainda que possua suaves diferenças com o original, se assemelha bastante e acredito que de forma
 satisfatória, cumprindo o requisito de fidelidade.
+
+
+## Instruções para baixar o projeto
+- Caso queira rodar o projeto em sua máquina, copie o link deste repositório (fornecido também na instrução abaixo).
+- Em seguida execute no terminal, no diretório de sua preferência, `git clone https://github.com/Deivz/teste-leadster.git`
+- No diretório do projeto, execute o comando `npm install`.
+- Para visualizá-lo no browser execute, também no terminal, `npm run dev`.
 
 ## Conclusão
 Pude atender cerca de 90% dos requisitos solicitados e tem sido bastante gratificante participar deste processo seletivo.
