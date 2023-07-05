@@ -66,7 +66,7 @@ se torna bastante inviável em um projeto que planeja escalar).
 
 ## Pontos de melhoria
 ### Multifiltros, busca dentre os itens filtrados, botão de limpar busca, ordenação e paginação
-Não foi definido nada com relação aos filtros, então optei por fazê-lo de forma simples a fim de produtividade.
+Não foi definido nada com relação aos filtros, então optei por fazê-lo de forma simples, visando ganho de produtividade.
 
 Um ponto de melhoria seria a criação de um campo de busca com botão para limpeza do campo. O motivo do levantamento deste ponto é promover facilidade
 ao usuário em encontrar um vídeo específico que ele queira visualizar.
