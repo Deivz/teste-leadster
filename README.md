@@ -89,6 +89,14 @@ no último dia do prazo informado, entretanto o prazo chegou e não houve tempo 
 cumprindo com todos os outros requisitos solicitados.
 
 
+### Uso do getStaticProps
+Optei por não utilizar o JSON Server (apesar de ter mockado um e subido na vercel pra utilizar) afim de ganhar tempo para executar as demais tarefas, então usei um arquivo TS com um JSON nele.
+Caso tivesse utilizado, inclusive prática utilizada projetos reais e escaláveis, uma outra abordagem na recepção dos videos seria utilizada.
+Seria feito um fetch na page Home, e em seguida utilizaria a função getStaticProps, realizando toda a montagem no build time, utilizando o conceito de SSG, conceito esse que é um dos fatores que faz
+o Next ser tão poderoso. Pra uma landing page de um negócio que visa essencialmente lidar com marketing e conversão de leads, é fundamental a utilização desta ferramenta por conta principalmente do SEO.
+Entretanto vale mencionar também o ganho de performance bem como usabilidade para o usuário, uma vez que a página seria renderizada de forma muito mais rápida.
+
+
 ## Desafios, dificuldades e superação
 Por se tratar de um projeto relativamente simples, as maiores dificuldades encontradas foram listadas no tópico anterior: filtro, ordenação, paginação e exibição no modal.
 Estas, infelizmente, não puderam ser contornadas 100%. O filtro ficou simples, mas funcional, a paginação funcionando com um certo problema (já relatado acima).A ordenação e a exibição do vídeo em modal não foram implementadas.
