@@ -1,15 +1,21 @@
 import Button from "@/components/Button";
 import FilterBar from "@/components/FilterBar";
+import Pagination from "@/components/Pagination";
 import VideoCard from "@/components/VideoCard";
 import { FilterContext } from "@/contexts/FilterContext";
 import { BenefitsContainer, HomeContainer, SloganContainer, VideosContainer } from "@/styles/pages/Home";
 import { Video } from "@/utils/videos";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 export default function Home() {
 
-  const { filter, genresList, videos } = useContext(FilterContext)
+  const { filter, genresList, videos } = useContext(FilterContext);
 
+  const [offset, setOffset] = useState(0);
+  const itensPerPage = 9;
+
+  const currentPageVideos = videos.slice(offset, offset + itensPerPage);
+  
   return (
     <HomeContainer>
       <section>
@@ -30,12 +36,13 @@ export default function Home() {
           <FilterBar genres={genresList} />
           <div className="videos">
             {
-              videos
+              currentPageVideos
                 .filter((video: Video) => !filter || video.genre.toUpperCase().includes(filter.toUpperCase()))
                 .map((video: Video) => <VideoCard video={video} key={video.id} />)
             }
           </div>
         </VideosContainer>
+        <Pagination itensPerPage={9} total={videos.length} offset={offset} setOffset={setOffset}/>
       </section>
       <section>
         <BenefitsContainer>

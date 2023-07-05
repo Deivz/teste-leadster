@@ -13,8 +13,10 @@ export default function VideoCard({ video }: VideoCardProp) {
       {/* descomentar para usar somente quando tiver uma qualidade de imagem mais alta, a
         descompressão do Image do Next removeu muita qualidade da imagem passada nos arquivos do teste */}
       {/* <Image src={imageUrl} width={362} height={204} alt='' />  */}
-      <img src={video.thumbnail} alt='' />
-      <span>{video.title}</span>
+      <a target='_blank' href={video.url}>
+        <img src={video.thumbnail} alt='' />
+        <span>{video.title}</span>
+      </a>
     </VideoCardContainer>
   )
 }

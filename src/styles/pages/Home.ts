@@ -63,6 +63,7 @@ export const SloganContainer = styled.div`
 
 export const VideosContainer = styled.div`
   align-items: center;
+  border-bottom: .1rem solid ${({ theme }) => theme["border-section-color"]};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +73,7 @@ export const VideosContainer = styled.div`
   width: ${({ theme }) => theme["container-width"]};
 
     .videos{
+      border-top: .1rem solid ${({ theme }) => theme["border-section-color"]};
       margin-top: 2rem;
     }
 

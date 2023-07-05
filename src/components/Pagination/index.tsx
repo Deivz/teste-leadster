@@ -1,40 +1,60 @@
-import { Videos } from '@/utils/videos'
-import React from 'react'
+import { PaginationContainer } from '@/styles/components/Pagination';
+import React, { Dispatch, SetStateAction } from 'react'
 
 interface PaginationProps {
-   length: number;
-   pageSize: number;
-   currentPage: number;
-   onPageChange: (page: number) => void;
+   itensPerPage: number;
+   total: number;
+   offset: number;
+   setOffset: Dispatch<SetStateAction<number>>;
 }
 
-export default function Pagination({ length, pageSize, currentPage, onPageChange }: PaginationProps) {
-   const pagesCount = Math.ceil(length / pageSize); // 100/10
+export default function Pagination({ itensPerPage, total, offset, setOffset }: PaginationProps) {
 
-   if (pagesCount === 1) return null;
-   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
+   let pageNumber: number = 0;
+   const MAX_BUTTONS_SHOWN: number = 9;
+   const MAX_BUTTONS_LEFT: number = (MAX_BUTTONS_SHOWN - 1) / 2;
+   const currentPage = offset ? (offset / itensPerPage) + 1 : 1;
+   const pages = Math.ceil(total / itensPerPage);
+   const firstButton = Math.max(currentPage - MAX_BUTTONS_LEFT, 1);
+
+   function onPageChange(page: number) {
+      const newOffset = (page - 1) * itensPerPage;
+      setOffset(newOffset);
+   }
 
    return (
-      <div>
-         {/* <ul className={styles.pagination}> */}
+      <PaginationContainer>
+         <span>Página</span>
          <ul>
-            {pages.map((page) => (
-               // <li
-               //    key={page}
-               //    className={
-               //       page === currentPage ? styles.pageItemActive : styles.pageItem
-               //    }
-               // >
-               <li key={page}>
-                  <a onClick={() => onPageChange(page)}>
+            {/* {
+               Array.from({ length: Math.min(MAX_BUTTONS_SHOWN, pages)}).map((_, index) => {
+                  pageNumber = index + firstButton;
+                  return (
+                     <li>
+                        <button onClick={() => onPageChange(pageNumber)}>{pageNumber}</button>
+                     </li>
+                  )
+               })
+            } */}
+            {Array.from({ length: Math.min(MAX_BUTTONS_SHOWN, pages) }).map((_, index) => {
+               const page = index + 1;
+               const isCurrentPage = offset === (page - 1) * itensPerPage;
+               const handleClick = () => {
+                  if (!isCurrentPage) {
+                     onPageChange(page);
+                  }
+               };
+               return (
+                  <button
+                     key={index}
+                     onClick={handleClick}
+                     disabled={isCurrentPage}
+                  >
                      {page}
-                  </a>
-                  {/* <a className={styles.pageLink} onClick={() => onPageChange(page)}>
-                     {page}
-                  </a> */}
-               </li>
-            ))}
+                  </button>
+               );
+            })}
          </ul>
-      </div>
+      </PaginationContainer>
    );
 };

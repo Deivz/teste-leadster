@@ -3,7 +3,6 @@ import { device } from "../global";
 
 export const FilterBarContainer = styled.div`
   align-items: center;
-  border-bottom: .1rem solid ${({ theme }) => theme["border-section-color"]};
   display: flex;
   flex-direction: column;
   font-size: .75rem;
@@ -34,8 +33,11 @@ export const FilterBarContainer = styled.div`
     }
   }
 
-  .select{
+  .order{
     margin-top: 1rem;
+  }
+
+  .select{
     padding-top: .5rem;
     width: 15.625rem;
     
@@ -54,6 +56,10 @@ export const FilterBarContainer = styled.div`
     ul{
       gap: .5rem;
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .order{
+      margin-top: 0;
     }
 
     .select{
