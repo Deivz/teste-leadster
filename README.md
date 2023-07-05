@@ -54,6 +54,18 @@ Para a inclusão dos ícones das redes sociais.
 Implementação de um input select pronto para a realização da ordenação dos vídeos.
 
 
+## Escolhas de arquitetura, código e implementação
+Como foi solicitado que projeto fosse uma landing page e que pudesse escalar futuramente, optei pela implementação de uma página default ao estilo SPA (visando usabilidade e performance).
+Os diretórios foram separados visando ao máximo uma boa manutenibilidade e escalabilidade. Ficando então da seguinte forma:
+
+<img src="https://github.com/Deivz/teste-leadster/assets/78604613/ed42cf60-586a-43f7-aa29-ddc7b37b924f" alt="Árvore de diretórios do projeto" />
+
+A separação dos arquivos em pastas para componentes e pages, bem como seus estilos, visa aproveitar melhor do framework utilizado. Uma vez que o Next implementa rotas através do nesting no
+diretório pages, deixando-o somente para fazer o roteamento permite o projeto crescer de forma que não quebre nada do que ja exista.
+
+A utilização de contexto para lidar com o filtro visa evitar um problema conhecido como prop drilling e o ganho de performance e manutenibilidade (uma vez que o controle de estado através de props
+se torna bastante inviável em um projeto que planeja escalar).
+
 ## Pontos de melhoria
 ### Multifiltros, busca dentre os itens filtrados, botão de limpar busca, ordenação e paginação
 Não foi definido nada com relação aos filtros, então optei por fazê-lo de forma simples a fim de produtividade.
